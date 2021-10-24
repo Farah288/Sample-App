@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+# group :production do
 gem 'bcrypt', '~> 3.1.16'
 # This gem brings back assigns to your controller tests as well as assert_template to both controller and integration tests.
 gem 'rails-controller-testing'
