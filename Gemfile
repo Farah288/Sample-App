@@ -10,6 +10,7 @@ ruby '2.7.2'
 # gem 'will_paginate', '~> 3.3.1'
 # gem 'faker', '~> 2.19.0'
 # group :production do
+gem 'bootstrap-sass', '3.4.1'
 gem 'bcrypt', '~> 3.1.16'
 # This gem brings back assigns to your controller tests as well as assert_template to both controller and integration tests.
 gem 'rails-controller-testing'
