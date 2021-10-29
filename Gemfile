@@ -3,12 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-# gem 'carrierwave', '~> 2.2.1'
-# gem 'mini_magick', '~> 4.11.0'
-# gem 'fog', '~> 2.2.0'
-# gem 'bootstrap-will_paginate', '~> 1.0.0'
-# gem 'will_paginate', '~> 3.3.1'
-# gem 'faker', '~> 2.19.0'
+gem 'carrierwave', '~> 2.2.1'
+gem 'mini_magick', '~> 4.11.0'
+gem 'fog', '~> 2.2.0'
+gem 'bootstrap-will_paginate', '~> 1.0.0'
+gem 'will_paginate', '~> 3.3.1'
+gem 'faker', '~> 2.19.0'
 # group :production do
 gem 'bootstrap-sass', '3.4.1'
 gem 'bcrypt', '~> 3.1.16'
