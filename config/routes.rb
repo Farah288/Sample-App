@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/404' => 'errors#not_found'
+  get '/500' => 'errors#internal_server_error'
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
+
   resources :users do 
     member do 
       get :following, :followers

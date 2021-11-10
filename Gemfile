@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+
+gem 'font-awesome-sass'
+gem "font-awesome-rails"
 gem 'carrierwave', '~> 2.2.1'
 gem 'mini_magick', '~> 4.11.0'
 gem 'fog', '~> 2.2.0'

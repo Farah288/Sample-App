@@ -1,4 +1,13 @@
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
 @import "bootstrap/scss/bootstrap";
+// @import '@fortawesome/fontawesome-free';
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 //  @import "node_modules/bootstrap/scss/alert";
 // $state-danger-text
 
@@ -284,3 +293,86 @@ span.picture {
     border: 0;
   }
 }
+
+/* progressbar */
+
+.container{
+  width: 100%;
+
+}
+.progressbar {
+  // counter-reset: step;
+  margin-bottom: 50px;
+  overflow: hidden;
+  color: lightgrey
+}
+
+.progressbar li {
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  // this line above also centers the steps to the page
+}
+
+.progressbar li:before{
+  // content: counter(step);
+  // counter-increment: step;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding: 2px;
+  width: 30px;
+  height: 28px;
+  border: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto; 
+  // this line above helps to center the boxes of 1 to the center of the page
+  border-radius: 50%;
+  // line-height: 25px;
+  background-color: white;
+}
+
+.progressbar li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $light-gray;
+  top: 14px;
+  left: -50%;
+  z-index: -2;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar li.active {
+  color: green;
+  
+  
+}
+.progressbar li.active:before {
+  border-color: green;
+}
+
+.progressbar #personal:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f007";
+  text-align: center;
+}
+
+.progressbar #account:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f023';
+  text-align: center;
+}
+.progressbar #confirmation:before  {
+  font-family: "Font Awesome 5 Free";
+  content: '\f00c';
+  text-align: center;
+}
+

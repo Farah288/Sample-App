@@ -1,23 +1,36 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% provide(:title, 'Sign up Page') %>
+<h1>Sign Up Page</h1>
 
-<div class="row">
-  <div class="col-md-6 mx-auto">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control'  %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+  <div class="container">
+    <ul class="progressbar">
+      <li class="active" id="account"><strong>Account</strong></li>
+      <li id="personal"><strong>Personal</strong></li>
+      <li id="confirmation"><strong>Confirmation</strong></li>
+    </ul>
   </div>
-</div>
+
+  <div class="step_header">
+   <h2>Please fill up Account Information</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control', placeholder: "Your Name" %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control', placeholder: "Your Email Adress" %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control', placeholder: "Your Password" %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Confirmed Password"  %>
+
+        <%= f.submit "Next Step", class: "btn btn-primary" %>
+
+      <% end %>
+    </div>
+  </div>
